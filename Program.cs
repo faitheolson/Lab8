@@ -39,8 +39,8 @@ namespace Lab8
                             NonZeroCount++;
                         }
                     }
-                    Console.WriteLine($"Player #{Row + 1} Batting average is:{CalculateBattingAverage(NonZeroCount, AtBat)}");
-                    Console.WriteLine($"Player #{Row + 1} Slugging Percentage is:{CalculateSluggingPercentage(SluggingScoreCount, AtBat)}");
+                    Console.WriteLine($"Player #{Row + 1} Batting average is:{BaseballMath.CalculateBattingAverage(NonZeroCount, AtBat)}");
+                    Console.WriteLine($"Player #{Row + 1} Slugging Percentage is:{BaseballMath.CalculateSluggingPercentage(SluggingScoreCount, AtBat)}");
                 }
                 Console.WriteLine("Run program again? (Y/N)");
                 repeat = RepeatProgram(Console.ReadLine().ToUpper());
@@ -67,7 +67,7 @@ namespace Lab8
         }
         public static string ValidateScores(string Input)
         {
-            while (!Regex.IsMatch(Input, @"(1|2|3|4)"))
+            while (!Regex.IsMatch(Input, @"(0|1|2|3|4)"))
             {
                 Console.WriteLine("Please enter a valid At-Bat number!");
                 Input = Console.ReadLine();
@@ -81,6 +81,10 @@ namespace Lab8
                 Console.WriteLine("Please enter a valid number of times at bat!");
                 Input = Console.ReadLine();
             }
+            if (int.Parse(Input) <= 0)
+            {
+                Console.WriteLine("Please enter a valid number of times at bat!");
+            }
             return Input;
         }
         public static string ValidatePlayerInput(string Input)
@@ -92,16 +96,18 @@ namespace Lab8
             }
             return Input;
         }
-        public static double CalculateBattingAverage(int NonZeros, int AtBats)
-        {
-            double BattingAverage = NonZeros / (double)AtBats;
 
-            return BattingAverage;
-        }
-        public static double CalculateSluggingPercentage(int SluggingScoreCount, int AtBats)
-        {
-            double SluggingPercentage = SluggingScoreCount / (double)AtBats;
-            return SluggingPercentage;
-        }
+        // ***I moved the following Methods to their own Class- BaseballMath
+        //public static double CalculateBattingAverage(int NonZeros, int AtBats)
+        //{
+        //    double BattingAverage = NonZeros / (double)AtBats;
+
+        //    return BattingAverage;
+        //}
+        //public static double CalculateSluggingPercentage(int SluggingScoreCount, int AtBats)
+        //{
+        //    double SluggingPercentage = SluggingScoreCount / (double)AtBats;
+        //    return SluggingPercentage;
+        //}
     }
 }
