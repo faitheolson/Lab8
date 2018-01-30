@@ -39,7 +39,7 @@ namespace Lab8
                             NonZeroCount++;
                         }
                     }
-                    Console.WriteLine($"Player #{Row + 1} batting average is:{CalculateBattingAverage(NonZeroCount, AtBat)}");
+                    Console.WriteLine($"Player #{Row + 1} Batting average is:{CalculateBattingAverage(NonZeroCount, AtBat)}");
                     Console.WriteLine($"Player #{Row + 1} Slugging Percentage is:{CalculateSluggingPercentage(SluggingScoreCount, AtBat)}");
                 }
                 Console.WriteLine("Run program again? (Y/N)");
@@ -50,7 +50,6 @@ namespace Lab8
             {
                 Console.WriteLine("Whoops! Something went wrong! Let's try again");
             }
-
         }
         public static bool RepeatProgram(string Input)
         {
