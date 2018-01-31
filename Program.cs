@@ -67,7 +67,7 @@ namespace Lab8
         }
         public static string ValidateScores(string Input)
         {
-            while (!Regex.IsMatch(Input, @"(0|1|2|3|4)"))
+            while (!Regex.IsMatch(Input, @"^(0|1|2|3|4)"))
             {
                 Console.WriteLine("Please enter a valid At-Bat number!");
                 Input = Console.ReadLine();
@@ -76,7 +76,7 @@ namespace Lab8
         }
         public static string ValidateAtBatInput(string Input)
         {
-            while (!Regex.IsMatch(Input,(@"(\d)")))
+            while (!Regex.IsMatch(Input,(@"^(\d)")))
             {
                 Console.WriteLine("Please enter a valid number of times at bat!");
                 Input = Console.ReadLine();
@@ -89,7 +89,7 @@ namespace Lab8
         }
         public static string ValidatePlayerInput(string Input)
         {
-            while (!Regex.IsMatch(Input, @"(\d)"))
+            while (!Regex.IsMatch(Input, @"^(\d)"))
             {
                 Console.WriteLine("Please enter a vaild number of players!");
                 Input = Console.ReadLine();

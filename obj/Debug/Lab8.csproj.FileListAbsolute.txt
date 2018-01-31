@@ -5,3 +5,5 @@ c:\users\ts-1\source\repos\Lab8\Lab8\obj\Debug\Lab8.csprojResolveAssemblyReferen
 c:\users\ts-1\source\repos\Lab8\Lab8\obj\Debug\Lab8.csproj.CoreCompileInputs.cache
 c:\users\ts-1\source\repos\Lab8\Lab8\obj\Debug\Lab8.exe
 c:\users\ts-1\source\repos\Lab8\Lab8\obj\Debug\Lab8.pdb
+C:\Users\TS-1\source\repos\Lab8\Lab8\bin\Debug\nunit.framework.dll
+C:\Users\TS-1\source\repos\Lab8\Lab8\bin\Debug\nunit.framework.xml
